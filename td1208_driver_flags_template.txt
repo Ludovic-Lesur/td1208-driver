@@ -1,0 +1,16 @@
+/*
+ * td1208_driver_flags.h
+ *
+ *  Created on: 14 oct. 2024
+ *      Author: Ludo
+ */
+
+#ifndef __TD1208_DRIVER_FLAGS_H__
+#define __TD1208_DRIVER_FLAGS_H__
+
+/*** TD1208 driver compilation flags ***/
+
+#define TD1208_DRIVER_UART_ERROR_BASE_LAST      0
+#define TD1208_DRIVER_DELAY_ERROR_BASE_LAST     0
+
+#endif /* __TD1208_DRIVER_FLAGS_H__ */
