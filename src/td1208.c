@@ -60,14 +60,14 @@ static void _TD1208_rx_irq_callback(uint8_t rx_byte) {
     // Read current index.
     uint8_t char_idx = td1208_ctx.reply[td1208_ctx.reply_idx].char_idx;
     // Store incoming byte.
-    td1208_ctx.reply[td1208_ctx.reply_idx].buffer[char_idx] = rx_byte;
+    td1208_ctx.reply[td1208_ctx.reply_idx].buffer[char_idx] = (char_t) rx_byte;
     // Manage index.
-    char_idx = (char_idx + 1) % TD1208_BUFFER_SIZE_BYTES;
+    char_idx = (uint8_t) ((char_idx + 1) % TD1208_BUFFER_SIZE_BYTES);
     td1208_ctx.reply[td1208_ctx.reply_idx].char_idx = char_idx;
     // Check ending characters.
     if (rx_byte == STRING_CHAR_LF) {
         // Switch buffer.
-        td1208_ctx.reply_idx = (td1208_ctx.reply_idx + 1) % TD1208_REPLY_BUFFER_DEPTH;
+        td1208_ctx.reply_idx = (uint8_t) ((td1208_ctx.reply_idx + 1) % TD1208_REPLY_BUFFER_DEPTH);
     }
 }
 
@@ -333,7 +333,7 @@ TD1208_status_t TD1208_send_frame(uint8_t* ul_payload, uint8_t ul_payload_size_b
     string_status = STRING_byte_array_to_hexadecimal_string(ul_payload, ul_payload_size_bytes, 0, (char_t*) &(command[idx]));
     STRING_exit_error(TD1208_ERROR_BASE_STRING);
     // AT command end.
-    idx += (ul_payload_size_bytes * MATH_U8_SIZE_HEXADECIMAL_DIGITS);
+    idx += (uint8_t) (ul_payload_size_bytes * MATH_U8_SIZE_HEXADECIMAL_DIGITS);
     command[idx++] = STRING_CHAR_NULL;
     // Send command through UART.
     status = _TD1208_send_command(command);
