@@ -13,6 +13,7 @@ Here is the versions compatibility table:
 
 | **td1208-driver** | **embedded-utils** |
 |:---:|:---:|
+| [sw1.1](https://github.com/Ludovic-Lesur/td1208-driver/releases/tag/sw1.1) | >= [sw5.0](https://github.com/Ludovic-Lesur/embedded-utils/releases/tag/sw5.0) |
 | [sw1.0](https://github.com/Ludovic-Lesur/td1208-driver/releases/tag/sw1.0) | >= [sw5.0](https://github.com/Ludovic-Lesur/embedded-utils/releases/tag/sw5.0) |
 
 # Compilation flags
