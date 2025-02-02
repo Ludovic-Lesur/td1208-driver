@@ -12,7 +12,7 @@
 #include "td1208_driver_flags.h"
 #endif
 #include "parser.h"
-#include "string.h"
+#include "strings.h"
 #include "types.h"
 
 /*** TD1208 macros ***/

@@ -11,9 +11,9 @@
 #include "td1208_driver_flags.h"
 #endif
 #include "error.h"
-#include "math.h"
+#include "maths.h"
 #include "parser.h"
-#include "string.h"
+#include "strings.h"
 #include "td1208_hw.h"
 #include "types.h"
 
