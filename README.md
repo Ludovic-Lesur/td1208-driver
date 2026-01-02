@@ -26,3 +26,20 @@ Here is the versions compatibility table:
 | `TD1208_DRIVER_DISABLE` | `defined` / `undefined` | Disable the TD1208 driver. |
 | `TD1208_DRIVER_UART_ERROR_BASE_LAST` | `<value>` | Last error base of the low level UART driver. |
 | `TD1208_DRIVER_DELAY_ERROR_BASE_LAST` | `<value>` | Last error base of the low level delay driver. |
+
+# Build
+
+A static library can be compiled by command line with `cmake`.
+
+```bash
+mkdir build
+cd build
+cmake -DCMAKE_TOOLCHAIN_FILE="<toolchain_file_path>" \
+      -DTOOLCHAIN_PATH="<arm-none-eabi-gcc_path>" \
+      -DTYPES_PATH="<types_file_path>" \
+      -DEMBEDDED_UTILS_PATH="<embedded-utils_path>" \
+      -DTD1208_DRIVER_UART_ERROR_BASE_LAST=0 \
+      -DTD1208_DRIVER_DELAY_ERROR_BASE_LAST=0 \
+      -G "Unix Makefiles" ..
+make all
+```
