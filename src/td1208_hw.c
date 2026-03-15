@@ -20,7 +20,7 @@
 /*******************************************************************/
 TD1208_status_t __attribute__((weak)) TD1208_HW_init(TD1208_HW_configuration_t* configuration) {
     // Local variables.
-    TD1208_status_t status = TD1208_SUCCESS;
+    TD1208_status_t status = TD1208_ERROR_HW_FUNCTION_NOT_IMPLEMENTED;
     /* To be implemented */
     UNUSED(configuration);
     return status;
@@ -29,7 +29,7 @@ TD1208_status_t __attribute__((weak)) TD1208_HW_init(TD1208_HW_configuration_t* 
 /*******************************************************************/
 TD1208_status_t __attribute__((weak)) TD1208_HW_de_init(void) {
     // Local variables.
-    TD1208_status_t status = TD1208_SUCCESS;
+    TD1208_status_t status = TD1208_ERROR_HW_FUNCTION_NOT_IMPLEMENTED;
     /* To be implemented */
     return status;
 }
@@ -37,7 +37,7 @@ TD1208_status_t __attribute__((weak)) TD1208_HW_de_init(void) {
 /*******************************************************************/
 TD1208_status_t __attribute__((weak)) TD1208_HW_uart_write(uint8_t* data, uint32_t data_size_bytes) {
     // Local variables.
-    TD1208_status_t status = TD1208_SUCCESS;
+    TD1208_status_t status = TD1208_ERROR_HW_FUNCTION_NOT_IMPLEMENTED;
     /* To be implemented */
     UNUSED(data);
     UNUSED(data_size_bytes);
@@ -47,7 +47,7 @@ TD1208_status_t __attribute__((weak)) TD1208_HW_uart_write(uint8_t* data, uint32
 /*******************************************************************/
 TD1208_status_t __attribute__((weak)) TD1208_HW_delay_milliseconds(uint32_t delay_ms) {
     // Local variables.
-    TD1208_status_t status = TD1208_SUCCESS;
+    TD1208_status_t status = TD1208_ERROR_HW_FUNCTION_NOT_IMPLEMENTED;
     /* To be implemented */
     UNUSED(delay_ms);
     return status;
