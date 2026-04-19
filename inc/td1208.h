@@ -29,7 +29,7 @@
  *******************************************************************/
 typedef enum {
     // Driver errors.
-    TD1208_SUCCESS,
+    TD1208_SUCCESS = 0,
     TD1208_ERROR_NULL_PARAMETER,
     TD1208_ERROR_SIGFOX_UL_PAYLOAD_SIZE,
     TD1208_ERROR_REPLY_TIMEOUT,
